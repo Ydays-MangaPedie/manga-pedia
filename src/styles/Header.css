@@ -1,0 +1,11 @@
+.logo {
+    object-fit: contain;
+}
+
+
+
+header {
+    background-color: rgb(109, 160, 205);
+    height: 10vh;
+}
+
