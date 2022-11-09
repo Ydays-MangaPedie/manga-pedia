@@ -1,4 +1,5 @@
 import {useLocation} from "react-router-dom";
+import CardList from "../components/CardList";
 
 function MangaPage() {
     // Récupérer les données url
@@ -6,10 +7,13 @@ function MangaPage() {
     const manga = location.state.data;
 
     return (<>
-    <h1>{manga.title}</h1>
+    <h1 className="text-center text-capitalize">{manga.title}</h1>
+    <h5>Synopsis</h5>
     <p>{manga.resume}</p>
-    <p>liste des arc</p>
-    <p>liste des personnages </p>
+    <h5>Arcs</h5>
+    <CardList data={manga.arc}/>
+    <h5>Personnages</h5>
+    <CardList data={manga.personnages}/>
     </>);
 }
 

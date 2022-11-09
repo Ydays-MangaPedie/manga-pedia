@@ -12,7 +12,7 @@ function App() {
     title: "naruto",
     resume:"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur aspernatur dignissimos, consequatur soluta ratione officiis repellendus veniam voluptate aut totam quasi minima, quod, illum quos aperiam rerum temporibus nobis. Deleniti.",
     personnages:Array(5).fill({imageUrl:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMqE87vQ4Qm9dzfQ6bWDi8XALcWrAwfGpsyLqZQL_Mty3eNvOWjnKOHmV9VheHrBaf-Uk&usqp=CAU",name:"Naruto"}),
-    arc:Array(5).fill({imageUrl:"https://static.wikia.nocookie.net/naruto/images/8/82/Kiri.png/revision/latest?cb=20170809202403&path-prefix=fr",title:"Mission au village de Kiri",personnages:Array(5).fill(haku)}),
+    arc:Array(5).fill({imageUrl:"https://cdn.shopify.com/s/files/1/0046/2779/1960/files/kirigakure_naruto.jpg?v=1582118135",title:"MissionKiri",personnages:Array(5).fill(haku)}),
 };
 
 const [mangas, setMangas] = React.useState(Array(15).fill(mangaData));
