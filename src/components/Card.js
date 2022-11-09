@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function Card({ imageUrl, title,state }) {
   return (
     <>
-   <Link to={`/manga/${state.name}`} state={{ data: state }}>
+   <Link to={`/manga/${title}`} state={{ data: state }}>
         <img
         className="card h-100"
           src={imageUrl}
