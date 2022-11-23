@@ -1,5 +1,6 @@
 import "../styles/CardList.css";
 import Card  from "../components/Card";
+import { Link } from "react-router-dom";
 
 function CardList({ data }) {
   return (
@@ -12,6 +13,7 @@ function CardList({ data }) {
             title={element.title}
             state={element}
           />
+          
         ))}
       </div>
     </>
