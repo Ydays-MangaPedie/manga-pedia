@@ -1,5 +1,8 @@
 .cardList{
-    height: 30vh;
+    height: 50vh;
     overflow-x: scroll;
     white-space: nowrap;
+    margin: 0 auto; 
+    float: none; 
+    margin-top: 150px; 
   }

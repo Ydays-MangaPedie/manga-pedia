@@ -5,6 +5,7 @@ function CardList({ data }) {
   return (
     <>
       <div className="cardList position-relative d-flex">
+        
         {data.map((element,id) => (
           <Card
           key={id}
