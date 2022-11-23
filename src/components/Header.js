@@ -1,15 +1,19 @@
 import "../styles/Header.css";
-
+import Menu from "../components/Menu";
 function Header() {
     return (<>
     <header className="d-flex justify-content-between mb-4">
-       
-        <img className="logo float-end" src="https://www.kanpai.fr/sites/default/files/styles/og/public/naruto-tag.jpg" alt="Logo" />
-        
+        <div className="bg-img">
+            hello   
+     
+        </div>
+
+           
         <h1>MANGAPÉDIE</h1>
+        
         <div className="empty"></div>
     </header>
-    
+    {/* <Menu /> */}
     </>);
 }
 
