@@ -2,6 +2,7 @@ import React from 'react';
 import { Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import MangaPage from "./pages/MangaPage";
+import ArcPage from "./pages/ArcPage";
 import './styles/App.css';
 
 function App() {
@@ -15,6 +16,8 @@ function App() {
     arc:Array(5).fill({imageUrl:"https://cdn.shopify.com/s/files/1/0046/2779/1960/files/kirigakure_naruto.jpg?v=1582118135",title:"MissionKiri",personnages:Array(5).fill(haku)}),
 };
 
+const testArc=Array(5).fill({imageUrl:"https://cdn.shopify.com/s/files/1/0046/2779/1960/files/kirigakure_naruto.jpg?v=1582118135",title:"MissionKiri",personnages:Array(5).fill(haku)});
+
 const [mangas, setMangas] = React.useState(Array(15).fill(mangaData));
 
   return (
@@ -22,6 +25,7 @@ const [mangas, setMangas] = React.useState(Array(15).fill(mangaData));
     <Routes>
       <Route exact path="/" element={<HomePage mangas={mangas}/>}></Route>
       <Route path="manga/:mangaName" element={<MangaPage />}></Route>
+      <Route path="manga/:mangaName/arc" element={<ArcPage arc={testArc} />}></Route>
 
     </Routes>
   </div>
