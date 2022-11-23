@@ -3,7 +3,7 @@ import Menu from "../components/Menu";
 function Header() {
     return (<>
     <header className="d-flex justify-content-between mb-4">
-        <div class="bg-img">
+        <div className="bg-img">
             hello   
      
         </div>
@@ -13,7 +13,7 @@ function Header() {
         
         <div className="empty"></div>
     </header>
-    <Menu />
+    {/* <Menu /> */}
     </>);
 }
 
