@@ -1,5 +1,5 @@
 import "../styles/Header.css";
-
+import Menu from "../components/Menu";
 function Header() {
     return (<>
     <header className="d-flex justify-content-between mb-4">
@@ -13,7 +13,7 @@ function Header() {
         
         <div className="empty"></div>
     </header>
-    
+    <Menu />
     </>);
 }
 
