@@ -1,0 +1,31 @@
+.cls-1 {
+    font-family: MoutardeDEMO-Regular, 'Moutarde DEMO';
+    font-size: 267.29px;
+  }
+
+  .cls-2 {
+    fill: none;
+  }
+
+  .cls-2, .cls-3 {
+    stroke: #1d1d1b;
+    stroke-miterlimit: 10;
+    stroke-width: 3px;
+  }
+
+  .cls-4, .cls-3 {
+    fill: #fff;
+  }
+
+  .cls-5, .cls-6 {
+    fill: #e30613;
+  }
+
+  .cls-6, .cls-7 {
+    font-family: MotleyForces-Regular, 'Motley Forces';
+    font-size: 165.72px;
+  }
+
+  .cls-8 {
+    opacity: .39;
+  }

@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Carousel from "react-spring-3d-carousel-2";
 import { config } from "react-spring";
 import uuid from "react-uuid";
+import "../styles/Carousel.css";
 function Slider({ data }) {
   const [goToSlide, setGoToSlide] = useState(0);
   const [slides, setSlides] = useState([]);
@@ -33,7 +34,7 @@ function Slider({ data }) {
   }, []);
 
   return (
-    <div style={{ width: "30%", height: "500px", margin: "0 auto" }}>
+    <div style={{ width: "40%", height: "600px", margin: "0 auto"}}>
       <Carousel slides={slides}
       goToSlide={0}
       offsetRadius={3}
