@@ -13,9 +13,9 @@ function Menu() {
             $('.menu-bg, .menu-items, .menu-burger').toggleClass('fs');
             $('.menu-burger').text() === "☰" ? $('.menu-burger').text('✕') : $('.menu-burger').text('☰');
                 }}>
-        <div><p>Accueil</p></div>
+        <div><a href="/"><p>Accueil</p></a></div>
         <div><p>Anime List</p></div>
-        <div><p>A propos</p></div>
+        <div><a href="/about"><p>A propos</p></a></div>
         <div><p>Contact</p></div>
         </div>
         

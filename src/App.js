@@ -2,6 +2,7 @@ import React from 'react';
 import { Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import MangaPage from "./pages/MangaPage";
+import AboutPage from "./pages/AboutPage";
 import './styles/App.css';
 
 function App() {
@@ -22,6 +23,7 @@ const [mangas, setMangas] = React.useState(Array(15).fill(mangaData));
     <Routes>
       <Route exact path="/" element={<HomePage mangas={mangas}/>}></Route>
       <Route path="manga/:mangaName" element={<MangaPage />}></Route>
+      <Route path="/about" element={<AboutPage mangas={mangas}/>}></Route>
 
     </Routes>
   </div>
