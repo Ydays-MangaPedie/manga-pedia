@@ -37,7 +37,7 @@ function AboutSlider({ data }) {
   }, []);
 
   return (
-    <div style={{ width: "0%", height: "570px", float: "inline-end", marginRight: "25vw"}}>
+    <div style={{ width: "0%", height: "570px", float: "right", marginRight: "25vw"}}>
       <Carousel slides={slides}
       goToSlide={0}
       offsetRadius={3}
