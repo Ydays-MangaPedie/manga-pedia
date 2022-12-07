@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import HorizontalSlider from "./HorizontalSlider";
 import "./../styles/ArcSlider.css";
 
 function ArcSlider({ arcs }) {
@@ -19,78 +20,20 @@ function ArcSlider({ arcs }) {
         }}
       >
         <HorizontalSlider show={2}>
-          <div>
-            <div style={{ padding: 8 }}>
-              <img
-                src="https://via.placeholder.com/300x300"
-                alt="placeholder"
-                style={{ width: "100%" }}
-              />
-            </div>
-          </div>
-          <div>
-            <div style={{ padding: 8 }}>
-              <img
-                src="https://via.placeholder.com/300x300"
-                alt="placeholder"
-                style={{ width: "100%" }}
-              />
-            </div>
-          </div>
-          <div>
-            <div style={{ padding: 8 }}>
-              <img
-                src="https://via.placeholder.com/300x300"
-                alt="placeholder"
-                style={{ width: "100%" }}
-              />
-            </div>
-          </div>
-          <div>
-            <div style={{ padding: 8 }}>
-              <img
-                src="https://via.placeholder.com/300x300"
-                alt="placeholder"
-                style={{ width: "100%" }}
-              />
-            </div>
-          </div>
-          <div>
-            <div style={{ padding: 8 }}>
-              <img
-                src="https://via.placeholder.com/300x300"
-                alt="placeholder"
-                style={{ width: "100%" }}
-              />
-            </div>
-          </div>
-          <div>
-            <div style={{ padding: 8 }}>
-              <img
-                src="https://via.placeholder.com/300x300"
-                alt="placeholder"
-                style={{ width: "100%" }}
-              />
-            </div>
-          </div>
-          <div>
-            <div style={{ padding: 8 }}>
-              <img
-                src="https://via.placeholder.com/300x300"
-                alt="placeholder"
-                style={{ width: "100%" }}
-              />
-            </div>
-          </div>
-          <div>
-            <div style={{ padding: 8 }}>
-              <img
-                src="https://via.placeholder.com/300x300"
-                alt="placeholder"
-                style={{ width: "100%" }}
-              />
-            </div>
-          </div>
+          {arcs.map((arc) => {
+            return (
+              <div>
+                <div className="slide">
+                  <img
+                    src={arc.imageUrl}
+                    alt="placeholder"
+                    style={{ width: "100%" }}
+                  />
+                  <h3 className="text-center">{arc.title}</h3>
+                </div>
+              </div>
+            );
+          })}
         </HorizontalSlider>
       </div>
     );

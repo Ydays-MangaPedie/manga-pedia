@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import './HorizontalSlider.css'
+import './../styles/HorizontalSlider.css'
 
 const HorizontalSlider = (props) => {
     const {children, show} = props
@@ -86,4 +86,4 @@ const HorizontalSlider = (props) => {
     )
 }
 
-export default Carousel
+export default HorizontalSlider;
