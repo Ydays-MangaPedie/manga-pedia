@@ -1,9 +1,11 @@
 import "../styles/About.css"
+import AboutSlider from "./AboutSlider";
+import Slider from "./Slider";
 
 function About() {
     return (
         <>
-        <div className="about_text">
+        <div className="about_text float-start">
             <h1>MangaPédie c'est quoi ?</h1>
             <br></br>
             <p>MangaPédie s’est créé sur un sujet et une problématique qui nous touche tous entre

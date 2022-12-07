@@ -3,7 +3,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import About from "../components/About"
 import Menu from "../components/Menu";
-
+import AboutSlider from "../components/AboutSlider";
 
 
 function AboutPage({mangas}) {
@@ -14,6 +14,7 @@ function AboutPage({mangas}) {
             <Header />
             <Menu/>
             <About/>
+            <AboutSlider data={mangas}/>
             <Footer />
             </div>
         </>
