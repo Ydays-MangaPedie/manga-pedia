@@ -24,7 +24,7 @@ body, html {
   z-index: 999;
 }
 .menu-bg {
-  background: #6DA0CD;
+  background: rgb(27, 69, 105);
   pointer-events: none;
   transition: 0.3s;
   /* right: 50px;
