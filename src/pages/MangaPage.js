@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import NavBar from "./../components/NavBar";
 import TitlePage from "./../components/TitlePage";
 import ArcPage from "./ArcPage";
+import Footer from "../components/Footer";
 function MangaPage() {
   const [page, setPage] = useState(0);
   const pages = ["résumé", "personnages", "arcs", "galerie"];
@@ -30,6 +31,7 @@ console.log(manga.arc);
       <NavBar pages={pages} actualPage={page} setPage={setPage} />
       <TitlePage title={pages[page]} />
       {pageToRender}
+      <Footer/>
     </>
   );
 }
