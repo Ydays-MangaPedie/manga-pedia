@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Carousel from "react-spring-3d-carousel-2";
 import { config } from "react-spring";
 import uuid from "react-uuid";
+import {Link} from "react-router-dom";
 function Slider({ data }) {
   const [goToSlide, setGoToSlide] = useState(0);
   const [slides, setSlides] = useState([]);
@@ -14,7 +15,9 @@ function Slider({ data }) {
       key: uuid(),
       content: (
         <div className="h-75">
+          <Link to={`/manga/${item.title}`} state={{data: item}}>
           <img src={item.imageUrl} alt={id} />
+          </Link>
           <div className="rounded-pill bg-light mt-4">
           <h3 className="text-center">{item.title}</h3>
           </div>
