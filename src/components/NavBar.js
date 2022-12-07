@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import Menu from "./../components/Menu";
 import "./../styles/NavBar.css";
 function NavBar({ pages, actualPage, setPage }) {
@@ -12,6 +11,7 @@ function NavBar({ pages, actualPage, setPage }) {
             if (actualPage === id) {
               return (
                 <button
+                key={id}
                   type="button"
                   className="btn-nav"
                   onClick={() => {
@@ -28,6 +28,7 @@ function NavBar({ pages, actualPage, setPage }) {
             }
             return (
               <button
+              key={id}
                 type="button"
                 className="btn-nav"
                 onClick={() => {

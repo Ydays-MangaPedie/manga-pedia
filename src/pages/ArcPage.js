@@ -3,7 +3,7 @@ import ArcSlider from './../components/ArcSlider';
 function ArcPage({arcs}) {
   return (
     <>
-      <ArcSlider />
+      <ArcSlider arcs={arcs} />
     </>
   );
 }
