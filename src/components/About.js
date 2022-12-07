@@ -1,6 +1,4 @@
 import "../styles/About.css"
-import AboutSlider from "./AboutSlider";
-import Slider from "./Slider";
 
 function About() {
     return (

@@ -1,0 +1,9 @@
+.about_text {
+    width: 50%;
+    color: black;
+}
+
+.about_text p {
+    font-size: 120%;
+    color: black
+}
