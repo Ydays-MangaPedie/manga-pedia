@@ -14,9 +14,9 @@ function Menu() {
             $('.menu-burger').text() === "☰" ? $('.menu-burger').text('✕') : $('.menu-burger').text('☰');
                 }}>
         <div><a href="/"><p className="whiteP">Accueil</p></a></div>
-        <div><p>Anime List</p></div>
+        <div><p className="whiteP">Anime List</p></div>
         <div><a href="/about"><p className="whiteP">A propos</p></a></div>
-        <div><p>Contact</p></div>
+        <div><a href="/contact"><p className="whiteP">Contact</p></a></div>
         </div>
         
         </>);
