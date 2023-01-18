@@ -23,7 +23,7 @@ const [mangas, setMangas] = React.useState(Array(15).fill(mangaData));
     <div className="App">
     <Routes>
       <Route exact path="/" element={<HomePage mangas={mangas}/>}></Route>
-      <Route path="manga/:mangaName" element={<MangaPage/>}></Route>
+      <Route path="manga/:mangaName" element={<MangaPage />}></Route>
       <Route path="/about" element={<AboutPage mangas={mangas}/>}></Route>
       <Route path="/contact" element={<ContactPage/>}></Route>
     </Routes>

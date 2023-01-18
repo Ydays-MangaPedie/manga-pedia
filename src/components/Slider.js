@@ -4,6 +4,7 @@ import { config } from "react-spring";
 import uuid from "react-uuid";
 import "../styles/Carousel.css";
 import { Link } from "react-router-dom";
+
 function Slider({ data }) {
   const [goToSlide, setGoToSlide] = useState(0);
   const [slides, setSlides] = useState([]);
