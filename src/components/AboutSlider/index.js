@@ -37,6 +37,8 @@ function AboutSlider({ data }) {
   }, []);
 
   return (
+    <>
+    <h1 style={{marginLeft: "69.8%"}}>L'équipage</h1>
     <div style={{ width: "0%", height: "570px", float: "right", marginRight: "25vw"}}>
       <Carousel slides={slides}
       goToSlide={0}
@@ -45,6 +47,7 @@ function AboutSlider({ data }) {
       config={config.gentle}
       />
     </div>
+    </>
   );
 }
 

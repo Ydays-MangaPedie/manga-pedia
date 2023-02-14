@@ -46,4 +46,12 @@
     margin-right: 1121px;
     width: 150px;
     height: 40px;
+    border-radius: 12% / 50%;
+    background-color: #DA2F37;
+    color: white;
+}
+
+.formulaire button:hover {
+    background-color: white;
+    color: #DA2F37;
 }
