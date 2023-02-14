@@ -34,7 +34,7 @@ body, html {
   transform: translate3d(5%, -7%, 0);
   width: 150vw;
   height: 100vh;
-  background: rgb(27, 69, 105);
+  background: #DA2F37;
 }
 .menu-burger {
   color: black;

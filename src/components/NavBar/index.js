@@ -1,11 +1,13 @@
-import Menu from "./../components/Menu";
-import "./../styles/NavBar.css";
+import Menu from "../Menu";
+import "./NavBar.css";
+
+
 function NavBar({ pages, actualPage, setPage }) {
   return (
     <>
       <div>
         <div className="navigation text-center mt-3">
-        <img className="float-start" src={require("../images/Logo-Mangapedie.png")} alt="Logo" />
+        <img className="float-start" src={require("../../images/Logo-Mangapedie.png")} alt="Logo" />
         <ul>
           {pages.map((navItem, id) => {
             if (actualPage === id) {

@@ -1,10 +1,10 @@
-import "./../styles/TitlePage.css";
+import "./TitlePage.css";
 
 function TitlePage({ title }) {
   return (
     <>
       <p className="titlePage d-inline flex-end" data-hover={title}>
-        {title} <span data-hover={title}></span>
+        {title}
       </p>
       <br />
     </>

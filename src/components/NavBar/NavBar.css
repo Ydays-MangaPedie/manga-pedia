@@ -23,6 +23,10 @@
     transition: all 0.3s ease 0s;
 }
 
+.float-start {
+    padding-left: 5vh;
+}
+
 .btn-nav {
     display: inline;
     padding: 0 !important;

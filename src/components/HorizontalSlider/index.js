@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import './../styles/HorizontalSlider.css'
+import './HorizontalSlider.css'
 
 const HorizontalSlider = (props) => {
     const {children, show} = props

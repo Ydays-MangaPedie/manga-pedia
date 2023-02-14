@@ -1,0 +1,84 @@
+.box {
+    height: 600px;
+    width: 2500px;
+    display: flex;
+    flex-wrap: wrap;
+  
+}
+
+
+.nameCharacter {
+    height: 150px;
+    width: 350px;
+    padding-left: 5vh;
+}
+
+.prenom {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 96px;
+    line-height: 116px;
+}
+
+.nom {
+    padding-left: 10%;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 96px;
+    line-height: 116px;
+}
+
+.resumeCharacter {
+    padding-left: 5vh;
+    padding-top: 15%;
+    width: 700px;
+}
+
+.capacityCharacter {
+
+    width: 100px;
+    height: 250px;
+    background: rgb(24,25,30);
+    
+}
+
+.parel {
+    width: 800px;
+    height: 250px;
+    color: white;
+    padding-left: 5%;
+    background: rgb(24,25,30);
+    background: linear-gradient(90deg, rgba(24,25,30,1) 5%, rgba(218,47,55,1) 41%, rgba(120,18,23,0.26514355742296913) 78%);
+    transform: skew(-20deg);
+
+}
+
+.capacityTitle {
+    font-size: 48px;
+    padding-top: 3%;
+    transform: skew(20deg);
+}
+
+.ulCapacity {
+    transform: skew(20deg);
+    font-size: 28px;
+    padding-left: 10%;
+}
+
+.imageContainer {
+    width: 100px;
+    height: 750px;
+    padding: auto;
+   
+    display: flex;
+}
+
+
+
+.middle {
+
+    display: block; 
+    
+}

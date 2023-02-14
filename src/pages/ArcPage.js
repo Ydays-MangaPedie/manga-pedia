@@ -1,4 +1,4 @@
-import ArcSlider from './../components/ArcSlider';
+import ArcSlider from "../components/ArcSlider/index";
 
 function ArcPage({arcs}) {
   return (

@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
-import HorizontalSlider from "./HorizontalSlider";
-import "./../styles/ArcSlider.css";
+import HorizontalSlider from "../HorizontalSlider";
+import "./ArcSlider.css";
+import TitlePage from "../TitlePage/index"
 
 function ArcSlider({ arcs }) {
   useEffect(() => {
@@ -11,7 +12,7 @@ function ArcSlider({ arcs }) {
   }
   if (true) {
     return (
-      <div
+      <><TitlePage title={"Arcs"}></TitlePage><div
         style={{
           maxWidth: 1200,
           marginLeft: "auto",
@@ -19,6 +20,7 @@ function ArcSlider({ arcs }) {
           marginTop: 64,
         }}
       >
+
         <HorizontalSlider show={2}>
           {arcs.map((arc) => {
             return (
@@ -27,32 +29,16 @@ function ArcSlider({ arcs }) {
                   <img
                     src={arc.imageUrl}
                     alt="placeholder"
-                    style={{ width: "100%" }}
-                  />
+                    style={{ width: "100%" }} />
                   <h3 className="text-center">{arc.title}</h3>
                 </div>
               </div>
             );
           })}
         </HorizontalSlider>
-      </div>
+      </div></>
     );
   }
-
-  return (
-    <>
-      <div className="game-section">
-        {arcs.map((arc, id) => {
-          return (
-            <div key={id} className="item active">
-              <img src={arc.imageUrl} alt="" />
-              <p className="item-title">{arc.title}</p>
-            </div>
-          );
-        })}
-      </div>
-    </>
-  );
 }
 
 export default ArcSlider;

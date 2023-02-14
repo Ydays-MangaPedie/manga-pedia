@@ -1,4 +1,4 @@
-import "../styles/Menu.css";
+import "./Menu.css";
 // import "../script/MenuScript.js"
 import $ from "jquery";
 function Menu() {
