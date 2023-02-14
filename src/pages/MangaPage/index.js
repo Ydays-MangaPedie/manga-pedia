@@ -1,11 +1,11 @@
 import { useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 // import CardList from "../components/CardList";
-import NavBar from "../components/NavBar";
-import TitlePage from "./../components/TitlePage";
-import ArcPage from "./ArcPage";
-import Footer from "../components/Footer";
-import CharacterPage from "./CharacterPage";
+import NavBar from "../../components/NavBar";
+// import TitlePage from "./../components/TitlePage";
+import ArcPage from "../ArcPage";
+import Footer from "../../components/Footer";
+import CharacterPage from "../CharacterPage";
 
 function MangaPage() {
   const [page, setPage] = useState(0);
@@ -15,8 +15,8 @@ function MangaPage() {
   const manga = location.state.data;
   const [pageToRender, setPageToRender] = useState();
 // console.log({manga});
-  console.log(manga.personnages[1]);
-  console.log(manga.arc);
+  // console.log(manga.personnages[1]);
+  // console.log(manga.arc);
   useEffect(() => {
     switch (page) {
       case 1:

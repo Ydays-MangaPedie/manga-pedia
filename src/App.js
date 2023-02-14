@@ -18,12 +18,12 @@ function App() {
     arc:Array(5).fill({imageUrl:"https://cdn.shopify.com/s/files/1/0046/2779/1960/files/kirigakure_naruto.jpg?v=1582118135",title:"MissionKiri",personnages:Array(5).fill(haku)}),
   };
   
-  const characterData = {
-    prenom: "Naruto",
-    nom: "Uzumaki",
-    description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur aspernatur dignissimos, consequatur soluta ratione officiis repellendus veniam voluptate aut totam quasi minima, quod, illum quos aperiam rerum temporibus nobis. Deleniti.",
-    imageUrl:"https://toppng.com/uploads/preview/naruto-standing-11549477149iuvonhhawf.png"
-  }
+  // const characterData = {
+  //   prenom: "Naruto",
+  //   nom: "Uzumaki",
+  //   description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur aspernatur dignissimos, consequatur soluta ratione officiis repellendus veniam voluptate aut totam quasi minima, quod, illum quos aperiam rerum temporibus nobis. Deleniti.",
+  //   imageUrl:"https://toppng.com/uploads/preview/naruto-standing-11549477149iuvonhhawf.png"
+  // }
 
   const [mangas, setMangas] = React.useState(Array(15).fill(mangaData));
     return (

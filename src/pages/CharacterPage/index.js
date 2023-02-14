@@ -1,4 +1,4 @@
-import Character from '../components/Character';
+import Character from '../../components/Character';
 
 function CharacterPage({personnage}) {
   return (
