@@ -1,0 +1,5 @@
+.cardList{
+    height: 30vh;
+    overflow-x: scroll;
+    white-space: nowrap;
+  }

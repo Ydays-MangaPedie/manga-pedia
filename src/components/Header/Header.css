@@ -1,0 +1,19 @@
+.logo {
+    object-fit: contain;
+}
+
+
+
+header {
+    height: 10vh;
+}
+
+.center {
+    height: 100px;
+    padding-top: 15px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
