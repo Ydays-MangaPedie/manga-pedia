@@ -1,6 +1,7 @@
 footer {
     width: 100%;
     background-color: #DA2F37;
-  
+    position: absolute;
     bottom: 0;
+    z-index: 100;
 }
