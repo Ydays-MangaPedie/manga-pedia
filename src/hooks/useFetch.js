@@ -4,26 +4,27 @@ import { useState, useEffect } from "react";
 const useFetch = (url, body, method) => {
   const [error, setError] = useState(null);
   const [data, setData] = useState({});
+  const fetchUrl = `http://localhost:4000/api/v1${url}`;
 
   const fetchData = async () => {
     try {
-      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}${url}`, {
-        method: method,
-        body: body ? JSON.stringify(body) : null,
+      const response = await fetch(fetchUrl, {
         headers: {
-          "Content-Type": "application/json",
-          "authorization": Cookies.get("token"),
+          "Content-Type": "Application/json",
         },
+        method: method,
+        ...(body && {
+          body: JSON.stringify(body),
+        }),
       });
       const data = await response.json();
-      console.log(data);
-      if (!response.ok) {
+      console.log({ data });
+      if (!data.success) {
         throw new Error(data.message || "Something went wrong!");
       }
-      setError(null);
       setData(data);
     } catch (error) {
-      setError(error.message);
+      setError(error);
     }
   };
 
