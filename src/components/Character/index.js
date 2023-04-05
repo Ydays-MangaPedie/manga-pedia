@@ -1,14 +1,10 @@
 import { useState, useEffect } from "react";
 import './Character.css'
 
-function Character({personnage}) {
-    useEffect(() => {
-        console.log({ personnage })
-    }, [personnage]);
 
-    if(!personnage) {
-        return "Pas de personnage!";
-    }
+function Character({personnage}) {
+
+
     if (true) {
         return(
             
@@ -16,6 +12,7 @@ function Character({personnage}) {
                 <div className="box">
                     <div className="nowrap">
                         <div className="nameCharacter">
+
                             <h1 className="prenom">NARUTO</h1>
                             <h1 className="nom">UZUMAKI</h1>
                         </div>

@@ -37,12 +37,13 @@ function Slider({ data }) {
   }, []);
 
   return (
-    <div style={{ width: "50%", height: "600px", margin: "0 auto",}}>
+    <div style={{ width: "50%", height: "60%", margin: "0 auto",}}>
       <Carousel slides={slides}
       goToSlide={0}
       offsetRadius={3}
       showNavigation={true}
       config={config.gentle}
+      
       />
     </div>
   );

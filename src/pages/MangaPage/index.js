@@ -6,6 +6,9 @@ import NavBar from "../../components/NavBar";
 import ArcPage from "../ArcPage";
 import Footer from "../../components/Footer";
 import CharacterPage from "../CharacterPage";
+import useFetch from "../../hooks/useFetch";
+import { useContext } from "react";
+import CharacterContext, { CharacterProvider } from "../../contexts/CharacterProvider";
 
 function MangaPage() {
   const [page, setPage] = useState(0);
@@ -14,9 +17,28 @@ function MangaPage() {
   const location = useLocation();
   const manga = location.state.data;
   const [pageToRender, setPageToRender] = useState();
-// console.log({manga});
-  // console.log(manga.personnages[1]);
-  // console.log(manga.arc);
+  const {isLoading, error, data, fetchData} = useFetch (
+    "/character/?idmanga=1",
+    null,
+    "GET"
+);
+
+  const [isOpen, setIsOpen] = useState(false);
+  const {character, setCharacter} = useContext(CharacterContext);
+  const [characterForm, setCharacterForm] = useState({});
+
+  useEffect(() => {
+      fetchData()
+  }, []);
+
+  useEffect(() => {
+      if (data) {
+        setCharacter(data);
+        setCharacterForm(data);
+      }
+      console.log(data)
+  }, [data]);
+
   useEffect(() => {
     switch (page) {
       case 1:
