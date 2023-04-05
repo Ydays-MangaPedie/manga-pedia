@@ -4,7 +4,9 @@ import AboutPage from './pages/AboutPage';
 import HomePage from "./pages/HomePage";
 import MangaPage from "./pages/MangaPage";
 import ContactPage from "./pages/ContactPage";
+import RienPage from './pages/RienPage/RienPage';
 import './styles/App.css';
+
 
 function App() {
   const haku = {imageUrl:"https://static.wikia.nocookie.net/p__/images/c/ca/Haku_Render.png/revision/latest?cb=20200514154731&path-prefix=protagonist",name:"Haku"}
@@ -33,6 +35,7 @@ function App() {
         <Route path="manga/:mangaName" element={<MangaPage/>}></Route>
         <Route path="/about" element={<AboutPage mangas={mangas}/>}></Route>
         <Route path="/contact" element={<ContactPage/>}></Route>
+        <Route path="/rien" element={<RienPage/>}></Route>
       </Routes>
     </div>
     );
