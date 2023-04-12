@@ -17,7 +17,7 @@ function Slider({ data }) {
       content: (
         <div className="h-75">
           <Link to={`manga/${item.title}`} state={{ data: item}}>
-            <img src={item.imageUrl} alt={id} />
+            <img src={item.image_url} alt={id} />
           </Link>
           <div className="rounded-pill bg-light mt-4">
           <h3 className="text-center">{item.title}</h3>

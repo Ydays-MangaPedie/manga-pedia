@@ -15,34 +15,36 @@ function MangaPage() {
   const pages = ["résumé", "personnages", "arcs"];
   // Récupérer les données url
   const location = useLocation();
-  const manga = location.state.data;
   const [pageToRender, setPageToRender] = useState();
-  const {isLoading, error, data, fetchData} = useFetch (
-    "/character/?idmanga=1",
-    null,
-    "GET"
-);
 
-  const [isOpen, setIsOpen] = useState(false);
-  const {character, setCharacter} = useContext(CharacterContext);
-  const [characterForm, setCharacterForm] = useState({});
-
-  useEffect(() => {
-      fetchData()
-  }, []);
-
-  useEffect(() => {
-      if (data) {
-        setCharacter(data);
-        setCharacterForm(data);
+  const { error, data, fetchData } = useFetch('/character/?idmanga=1', null, 'GET');
+  const [manga,setManga] = useState();
+      useEffect(() => {
+        fetchData();
+      }, []);
+    
+      
+      useEffect(()=>{
+        console.log("data 1: ", data.data)
+        setManga(data.data);
       }
-      console.log(data)
-  }, [data]);
+      ,[data])
+  
+      
+      
+
+  // useEffect(() => {
+  //     if (data) {
+  //       setCharacter(data);
+  //       setCharacterForm(data);
+  //     }
+  //     console.log(data)
+  // }, [data]);
 
   useEffect(() => {
     switch (page) {
       case 1:
-        setPageToRender(<CharacterPage personnage={manga.personnages}/>);
+        setPageToRender(<CharacterPage personnage={manga}/>);
         break;
       case 2:
         setPageToRender(<ArcPage arcs={manga.arc} />);
@@ -52,6 +54,8 @@ function MangaPage() {
         break;
     }
   }, [page]);
+
+  if (error) return <div>Error: {error.message}</div>;
 
   return (
     <>

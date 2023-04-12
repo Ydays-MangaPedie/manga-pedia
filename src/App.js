@@ -5,6 +5,7 @@ import HomePage from "./pages/HomePage";
 import MangaPage from "./pages/MangaPage";
 import ContactPage from "./pages/ContactPage";
 import RienPage from './pages/RienPage/RienPage';
+import CharacterPage from './pages/CharacterPage';
 import './styles/App.css';
 
 
@@ -33,6 +34,7 @@ function App() {
       <Routes>
         <Route exact path="/" element={<HomePage mangas={mangas}/>}></Route>
         <Route path="manga/:mangaName" element={<MangaPage/>}></Route>
+        <Route path="manga/:mangaName/:characterName" element={<CharacterPage/>}></Route>
         <Route path="/about" element={<AboutPage mangas={mangas}/>}></Route>
         <Route path="/contact" element={<ContactPage/>}></Route>
         <Route path="/rien" element={<RienPage/>}></Route>

@@ -3,7 +3,7 @@ import useFetch from "../../hooks/useFetch";
 import RienCompo from "../../components/RienCompo"
 
   const Index = () => {
-    const { error, data, fetchData } = useFetch('/manga', null, 'GET');
+    const { error, data, fetchData } = useFetch('/character/?idmanga=1', null, 'GET');
 const [manga,setManga] = useState();
     useEffect(() => {
       fetchData();
@@ -23,13 +23,10 @@ const [manga,setManga] = useState();
         <h1>Manga List:</h1>
         <ul>
           {manga && manga.map(item => (
-            <li key={item.id}>
-              <h2>{item.title}</h2>
-              <img src={item.image_url} alt={item.title} />
-              <p>Status: {item.status}</p>
-              <p>Synopsis: {item.synopsis}</p>
-              <p>Number of chapters: {item.num_chapters}</p>
-              <p>Number of volumes: {item.num_volumes}</p>
+            <li key={item.idmanga}>
+              <h2>{item.nom}</h2>
+              <img src={item.imgURL} alt={item.nom} />
+              <p>Desc: {item.desc_perso}</p>
             </li>
           ))}
         </ul>
