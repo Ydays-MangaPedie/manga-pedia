@@ -4,7 +4,6 @@ const useFetch = (url, body, method) => {
   const [error, setError] = useState(null);
   const [data, setData] = useState({});
   const fetchUrl = `http://localhost:4000/api/v1${url}`;
-
   const fetchData = async () => {
     try {
       const response = await fetch(fetchUrl, {
@@ -17,7 +16,7 @@ const useFetch = (url, body, method) => {
         }),
       });
       const data = await response.json();
-      console.log({ data });
+
       if (!data.success) {
         throw new Error(data.message || 'Something went wrong!');
       }

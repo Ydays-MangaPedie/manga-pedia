@@ -47,8 +47,6 @@ const Index = ({ images }) => {
     );
   };
 
-
-
   return (
     <div className={styles.carousel}>
       <button

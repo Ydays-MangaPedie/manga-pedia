@@ -1,9 +1,10 @@
+import { useRouter } from 'next/router';
+
 const Index = () => {
-  return (
-    <>
-      <div>Ok</div>
-    </>
-  );
+  const router = useRouter();
+  const imageId = router?.location?.state?.imageId;
+
+  return <div>The image ID is: {imageId}</div>;
 };
 
 export default Index;

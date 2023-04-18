@@ -16,6 +16,11 @@
   cursor: pointer;
 }
 
+.burger:hover,
+.close:hover {
+  color: $second_color  ;
+}
+
 .close {
   padding-top: 50%;
   padding-right: 90%;
