@@ -17,7 +17,7 @@ const CharacterPage = () => {
   if (error) return <div>Error: {error.message}</div>;
 
   <div className={styles.container}>
-    <Slider characters={data} />
+    <Slider characters={data.data} />
   </div>;
   <div>No characters to display</div>;
 };
