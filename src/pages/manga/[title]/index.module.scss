@@ -1,6 +1,24 @@
-.container {
-  padding-left: 40px;
-  padding-right: 40px;
-  width: 80%;
-  margin: 0 auto;
+@import '../../../styles/variable.scss';
+
+.page {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.resume {
+  color: $white_color;
+  font-family: $first_font;
+  width: 50%;
+}
+
+.title {
+  font-size: 50px;
+  font-weight: 800;
+  font-family: $second_font;
+  color: $second_color;
+}
+
+.image img{
+  width: 475px;
+  margin-left: 30%;
 }
