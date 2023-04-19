@@ -6,19 +6,29 @@ import CharacterPage from '@/pages/manga/[title]/characters';
 import ArcPage from '@/pages/manga/[title]/arcs';
 import Resume from '@/pages/manga/[title]';
 import { useEffect, useState } from 'react';
+import useFetch from '@/hooks/useFetch';
 
 const Index = () => {
   const [page, setPage] = useState(0);
   const pages = ['Résumé', 'Personnages', 'Arcs'];
   const [pageToRender, setPageToRender] = useState();
 
+  const { error, data, fetchData } = useFetch(
+    '/character/?id_manga=1',
+    null,
+    'GET'
+  );
+
+  useEffect(() => {
+    fetchData();
+  }, []);
   useEffect(() => {
     switch (page) {
       case 0:
         setPageToRender(<Resume />);
         break;
       case 1:
-        setPageToRender(<CharacterPage />);
+        setPageToRender(<CharacterPage chara={data.data} error={error} />);
         break;
       case 2:
         setPageToRender(<ArcPage />);

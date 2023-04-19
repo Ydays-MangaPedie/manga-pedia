@@ -8,6 +8,11 @@
   margin-top: 2rem;
 }
 
+.error {
+  color: $second_color;
+  font-size: 56px;
+  font-family: $second_font;
+}
 .cardContainer {
   display: flex;
   position: relative;

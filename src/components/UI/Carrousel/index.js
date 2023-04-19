@@ -6,7 +6,11 @@ import { useRouter } from 'next/router';
 const Index = ({ images }) => {
   const router = useRouter();
   if (!images || images.length === 0) {
-    return <div>No images to display.</div>;
+    return (
+      <div className={styles.parent}>
+        <p className={styles.error}>No images to display.</p>
+      </div>
+    );
   }
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -46,8 +50,6 @@ const Index = ({ images }) => {
       { shallow: true }
     );
   };
-
-
 
   return (
     <div className={styles.carousel}>

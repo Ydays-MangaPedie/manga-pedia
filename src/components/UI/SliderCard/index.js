@@ -6,7 +6,11 @@ import { useRouter } from 'next/router';
 const Index = ({ images }) => {
   const router = useRouter();
   if (!images || images.length === 0) {
-    return <div>No images to display.</div>;
+    return (
+      <div className={styles.parent}>
+        <p className={styles.error}>No images to display.</p>
+      </div>
+    );
   }
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -30,61 +34,48 @@ const Index = ({ images }) => {
     });
   };
 
-  const prevIndex = activeIndex === 0 ? images.length - 1 : activeIndex - 1;
-  const nextIndex = activeIndex === images.length - 1 ? 0 : activeIndex + 1;
-
-  const handleImageClick = () => {
-    router.push(
-      {
-        pathname: `/manga/${images[activeIndex].title
-          .toLowerCase()
-          .split(' ')
-          .join('_')}`,
-        state: { imageId: images[activeIndex].id },
-      },
-      undefined,
-      { shallow: true }
-    );
-  };
-
   return (
-    <div className={styles.carousel}>
-      <button
-        className={`${styles.button} ${styles.prev}`}
-        onClick={handlePrev}
-      >
-        {'\u2190'}
-      </button>
-      <div className={styles.cardContainer}>
-        <div className={styles.card}>
-          <img
-            src={images[prevIndex].image_url}
-            alt={images[prevIndex].title}
-          />
+    <>
+      {router.asPath.startsWith('/manga/naruto') ? (
+        <div className={styles.slider}>
+          <div className={styles.titleContainer}>
+            <h1 className={styles.title}>{images[activeIndex].nom}</h1>
+            <p className={styles.para}>{images[activeIndex].description}</p>
+            <p className={styles.para}>{images[activeIndex].age} ans</p>
+          </div>
+          <div className={styles.contentContainer}>
+            <button
+              className={`${styles.button} ${styles.prev}`}
+              onClick={handlePrev}
+            >
+              {'\u2190'}
+            </button>
+            <div className={styles.cardContainer}>
+              <div className={`${styles.card} ${styles.active}`}>
+                <img
+                  src={images[activeIndex].imgURL}
+                  alt={images[activeIndex].title}
+                />
+              </div>
+            </div>
+            <button
+              className={`${styles.button} ${styles.next}`}
+              onClick={handleNext}
+            >
+              {'\u2192'}
+            </button>
+          </div>
         </div>
-        <div
-          className={`${styles.card} ${styles.active}`}
-          onClick={handleImageClick}
-        >
-          <img
-            src={images[activeIndex].image_url}
-            alt={images[activeIndex].title}
-          />
+      ) : (
+        <div className={styles.no_info}>
+          <h1>Oh non !</h1>
+          <h2>
+            Il semblerait qu'il n'y ait pas encore d'informations disponibles
+            sur cette page :(
+          </h2>
         </div>
-        <div className={styles.card}>
-          <img
-            src={images[nextIndex].image_url}
-            alt={images[nextIndex].title}
-          />
-        </div>
-      </div>
-      <button
-        className={`${styles.button} ${styles.next}`}
-        onClick={handleNext}
-      >
-        {'\u2192'}
-      </button>
-    </div>
+      )}
+    </>
   );
 };
 
