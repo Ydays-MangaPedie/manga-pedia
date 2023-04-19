@@ -13,22 +13,13 @@ const Index = () => {
   const pages = ['Résumé', 'Personnages', 'Arcs'];
   const [pageToRender, setPageToRender] = useState();
 
-  const { error, data, fetchData } = useFetch(
-    '/character/?id_manga=1',
-    null,
-    'GET'
-  );
-
-  useEffect(() => {
-    fetchData();
-  }, []);
   useEffect(() => {
     switch (page) {
       case 0:
         setPageToRender(<Resume />);
         break;
       case 1:
-        setPageToRender(<CharacterPage chara={data.data} error={error} />);
+        setPageToRender(<CharacterPage />);
         break;
       case 2:
         setPageToRender(<ArcPage />);
