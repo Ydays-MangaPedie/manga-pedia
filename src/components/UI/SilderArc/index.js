@@ -41,12 +41,12 @@ const Index = ({ images }) => {
           <div className={styles.titleContainer}>
             <h1 className={styles.title}>{images[activeIndex].nom}</h1>
             <p className={styles.para}>Manga :</p>
-            <p className={styles.para}>
+            <p className={styles.para1}>
               Chapitre {images[activeIndex].debut_chapitre} à chapitre{' '}
               {images[activeIndex].fin_chapitre}
             </p>
             <p className={styles.para}>Manga :</p>
-            <p className={styles.para}>
+            <p className={styles.para1}>
               Épisode {images[activeIndex].debut_episode} à épisode{' '}
               {images[activeIndex].fin_episode}
             </p>
