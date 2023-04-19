@@ -1,0 +1,76 @@
+@import '../../../styles/variable.scss';
+
+.footer {
+  width: 100%;
+  height: 125px;
+  background: linear-gradient(
+    to bottom,
+    #101115 75%,
+    rgba(36, 38, 43, 0.85) 100%
+  );
+  color: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.line {
+  width: 75%;
+  height: 1px;
+  background-color: #ff0000;
+  margin-top: 25px;
+}
+
+.content {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logoContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  width: 25px;
+  margin-right: 20px;
+  margin-left: 25px;
+}
+
+.text {
+  font-family: $third_font;
+  font-size: 14px;
+  padding-right: 75px;
+  text-align: center;
+}
+
+.button {
+  font-size: 14px;
+
+  border-radius: 20px;
+  padding: 10px 20px;
+  margin-right: 30px;
+  cursor: pointer;
+  background-color: $second_color;
+  transition: all 0.2s ease-in-out;
+}
+
+.button a {
+  color: #fff;
+  font-size: 12px;
+  font-family: $first_font;
+  text-decoration: none;
+}
+
+.button:hover {
+  background-color: #8d1b20;
+  color: #fff;
+}

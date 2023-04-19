@@ -1,0 +1,106 @@
+@import '../../../styles/variable.scss';
+
+.menu {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: transparent;
+}
+
+.burger {
+  padding-top: 50%;
+  padding-right: 100%;
+  color: $first_color;
+  font-size: 50px;
+  font-family: $second_font;
+  cursor: pointer;
+}
+
+.burger:hover,
+.close:hover {
+  color: $second_color  ;
+}
+
+.close {
+  padding-top: 50%;
+  padding-right: 90%;
+  color: $first_color;
+  font-size: 50px;
+  font-family: $second_font;
+  cursor: pointer;
+  z-index: 999;
+  transition: transform 0.2s ease-in-out;
+}
+
+.items {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #18191e;
+  background-image: url('../../../../public/img/menu-background.png');
+
+  transform: translate(100%, -100%);
+  transition: transform 0.3s ease-in-out;
+
+  clip-path: circle(0%);
+}
+
+.items.show {
+  transform: translate(0, 0);
+  clip-path: circle(100%);
+}
+
+.item {
+  margin: 5px;
+}
+
+.item p {
+  font-family: $second_font;
+  color: white;
+  font-size: 56px;
+  cursor: pointer;
+
+  transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.item p:hover {
+  color: $second_color;
+  text-decoration: none;
+  transform: scale(1.1);
+}
+
+.item a {
+  text-decoration: none;
+}
+.item a:hover {
+  color: $second_color;
+  transform: scale(1.1);
+}
+
+.items.show .close {
+  transform: translate(0, 0);
+}
+
+.logoContainer {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  padding-bottom: 50px;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  width: 60px;
+  margin-right: 20px;
+  margin-left: 30px;
+}
